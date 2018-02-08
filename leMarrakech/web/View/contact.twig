@@ -1,0 +1,50 @@
+{% extends "layout.twig" %}
+
+{% block titel %}- Contact {% endblock %}
+
+{% block main %}
+    <h3>Contact</h3>
+  <section class="contact">
+    <section>
+      <article class="">
+        <h2>Acces:</h2>
+        <p><span>En Voiture :</span><br>
+          Sur la Nationale 13, en face du Pont de Bougival<br>
+          2 parkings publics à proximité :<br>
+          - Parking RN 13 (en face du restaurant)<br>
+          - Parking Centre Bouzemont (centre ville de Bougival)<br>
+          <span>En Bus :</span><br>
+          Ligne RATP n°258 La Défense St germain en Laye RER, s’arrêter au Pont de Bougival</p><br>
+          <h2>Horaires</h2>
+          <p><span>Ouvert tous les jours sauf le lundi.</span><br>
+          À partir de midi pour le déjeuner et 19h00 pour le diner.</p>
+          <h2>Téléphone</h2>
+          <p>01 39 18 11 18 <br>
+            06 50 20 45 10</p>
+          <h2>Paiements accêptés</h2>
+          <p>Espèces, CB, American Express, Chèques, Ticket restaurant</p>
+        </article>
+      </section>
+      <section>
+        <article class="">
+          <h2>Adresse </h2>
+          <img src="{{app.request.basePath}}/img/leMarrakech.jpg" alt="">
+          <p><span>Le Maroc en Yvelines</span> <br>
+          3, quai Boissy d’anglas - 78380 BOUGIVAL<br>
+        (RN 13 Pont de Bougival)</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.727535283267!2d2.6753135156812995!3d49.05380397930706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e62321b7fc62cb%3A0x67da5be267dc5332!2sRestaurant+Le+Marrakech!5e0!3m2!1sfr!2sfr!4v1513615869648" width="450" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </article>
+      </section>
+    </section>
+    <section class="formulaire">
+      <h2>Contactez-nous par ce formulaire</h2>
+      <form class="" action="" method="post">
+        <fieldset>
+          <label>Nom:</label><input type="text" name="name" value="" required="required">
+          <label>Mail:</label><input type="email" name="mail" value="" required="required">
+          <label>Message:</label><textarea name="content" rows="8" cols="87"></textarea>
+          <input type="submit" value="Envoyer" />
+        </fieldset>
+      </form>
+    </section>
+{% endblock %}

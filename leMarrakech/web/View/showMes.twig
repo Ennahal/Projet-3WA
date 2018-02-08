@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{app.request.basePath}}/CSS/stylesheet.css">
+  <link href="{{app.request.basePath}}/CSS/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dr+Sugiyama" rel="stylesheet">
+  <title>Le Marrakech - admin</title>
+</head>
+<body class="admin">
+  <section>
+    <table>
+      <h1>Message</h1>
+      <tr>
+        <th>Date</th>
+        <th>Nom</th>
+        <th>Message</th>
+        <th>Mail</th>
+      </tr>
+      <tr>
+        {% for message in messages %}
+        <td>{{ message.Date }}</td>
+        <td>{{ message.Name }}</td>
+        <td>{{ message.Content }}</td>
+        <td>{{ message.Mail }}</td>
+      </tr>
+        {% endfor %}
+    </table>
+  </section>
+</body>
+</html>

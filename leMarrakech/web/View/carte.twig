@@ -1,0 +1,186 @@
+{% extends "layout.twig" %}
+
+{% block titel %}- La Carte {% endblock %}
+
+{% block main %}
+<h3>La carte</h3>
+<section class="block meals">
+  <article class="description">
+    <img src="{{app.request.basePath}}/img/carte/entré.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Entré</th>
+        <th>Prix</th>
+      </tr>
+      {% for starter in starters %}
+      <tr>
+        <td>{{ starter.Name }}</td>
+        <td>{{ starter.Description }}</td>
+        <td>{{ starter.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="{{app.request.basePath}}/img/carte/couscous.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Couscous</th>
+        <th>Prix</th>
+      </tr>
+      {% for couscous in couscouss %}
+      <tr>
+        <td>{{ couscous.Name }}</td>
+        <td>{{ couscous.Description }}</td>
+        <td>{{ couscous.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="{{app.request.basePath}}/img/carte/desserts.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Dessert</th>
+        <th>Prix</th>
+      </tr>
+      {% for dessert in desserts %}
+      <tr>
+        <td>{{ dessert.Name }}</td>
+        <td>{{ dessert.Description }}</td>
+        <td>{{ dessert.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </tr>
+  </table>
+</article>
+<article class="description">
+  <img src="{{app.request.basePath}}/img/carte/plats.jpg" alt="">
+  <table>
+    <tr>
+      <th colspan="2">Plats Garnis</th>
+      <th>Prix</th>
+    </tr>
+    {% for dish in dishs %}
+    <tr>
+      <td>{{ dish.Name }}</td>
+      <td>{{ dish.Description }}</td>
+      <td>{{ dish.Price }}€</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="{{app.request.basePath}}/img/carte/tajines.jpg" alt="">
+  <table>
+    <tr>
+      <th colspan="2">TAJINES D'AGNEAU</th>
+      <th>Prix</th>
+    </tr>
+    {% for TajineAgneau in TajineAgneaus %}
+    <tr>
+      <td>{{ TajineAgneau.Name }}</td>
+      <td>{{ TajineAgneau.Description }}</td>
+      <td>{{ TajineAgneau.Price }}€</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th colspan="2">TAJINES Poulet</th>
+      <th>Prix</th>
+    </tr>
+    {% for TajinesPoulet in TajinesPoulets %}
+    <tr>
+      <td>{{ TajinesPoulet.Name }}</td>
+      <td>{{ TajinesPoulet.Description }}</td>
+      <td>{{ TajinesPoulet.Price }}€</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="{{app.request.basePath}}/img/carte/enfant.jpg" alt="">
+  <h5>Menu enfants 10,50€</h5>
+  <ul>
+    <li>Poulet ou Merguez</li>
+    <li>Semoule ou pommes frites</li>
+    <li>2 boules de glace au choix</li>
+    <li>1 Boisson</li>
+  </ul>
+  <img src="{{app.request.basePath}}/img/carte/adulte.jpg" alt="">
+  <h5>Menu adulte 13,00€ (Sauf le soir, le week-end et les jours fériés, Boisson non comprise)</h5>
+  <p>Entrée & Plat ou Plat & Dessert</p>
+  <ul>
+    <li>Entrée au choix : Brick à l’oeuf, salade verte ou salade de tomates</li>
+    <li>Plat au choix : Poulet grillée, Merguez, Couscous merguez ou poulet</li>
+    <li>Dessert au choix : Patisserie marocaine (1 pièce), salade de fruits ou 2 boules de glace</li>
+  </ul>
+</article>
+</section>
+<h1>Carte des Boisson</h1>
+<section class="block drink">
+  <article class="description">
+    <img src="{{app.request.basePath}}/img/carte/apero.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Apéritifs</th>
+        <th>Prix</th>
+      </tr>
+      {% for aperitif in aperitifs %}
+      <tr>
+        <td>{{ aperitif.Name }}</td>
+        <td>{{ aperitif.Description }}</td>
+        <td>{{ aperitif.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="{{app.request.basePath}}/img/carte/vins.jpg" alt="">
+    <table>
+      <tr>
+        <th>Vins</th>
+        <th>37,5cl</th>
+        <th>75cl</th>
+      </tr>
+      {% for wine in wines %}
+      <tr>
+        <td>{{ wine.Name }}</td>
+        <td>{{ wine.Price37 }}€</td>
+        <td>{{ wine.Price75 }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </article>
+  <article class="description">
+    <img src="{{app.request.basePath}}/img/carte/boissons.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Boissons Frais</th>
+        <th>Prix</th>
+      </tr>
+      {% for FreshDrink in FreshDrinks %}
+      <tr>
+        <td>{{ FreshDrink.Name }}</td>
+        <td>{{ FreshDrink.Description }}</td>
+        <td>{{ FreshDrink.Price }}€</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <th colspan="2">Boissons Chauds</th>
+        <th>Prix</th>
+      </tr>
+      {% for HotDrink in HotDrinks %}
+      <tr>
+        <td>{{ HotDrink.Name }}</td>
+        <td>{{ HotDrink.Description }}</td>
+        <td>{{ HotDrink.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <img src="{{app.request.basePath}}/img/carte/digestifs.jpg" alt="">
+    <table>
+      <tr>
+        <th colspan="2">Digestifs</th>
+        <th>Prix</th>
+      </tr>
+      {% for digestive in digestives %}
+      <tr>
+        <td>{{ digestive.Name }}</td>
+        <td>{{ digestive.Description }}</td>
+        <td>{{ digestive.Price }}€</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </article>
+</section>
+{% endblock %}

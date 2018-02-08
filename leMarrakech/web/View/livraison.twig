@@ -1,0 +1,36 @@
+{% extends "layout.twig" %}
+
+{% block titel %}- Livraison {% endblock %}
+
+{% block main %}
+
+
+  <section class="livraison">
+    <h3>Livraison à domicile</h3>
+    <section>
+      <article class="">
+        <p>Le restaurant Maroc en Yvelines vous propose depuis maintenant plus de dix ans ses spécialités livrées à domicile ou à emporter sur un vaste secteur.<br>
+          <span>Les livraisons sont assurées et ce gratuitement
+            Tous les jours (sauf le lundi) de 12h00 à 14h30 et de 19h00 à 22h00.
+            (le delai de livraison est en moyenne d'une heure.)</span>
+            <br>Nos coucous sont livrés chauds dans une couscoussière à trois compartiments (semoule, viande et légumes) facile à réchauffer; certaines de nos couscoussières sont compatibles avec les plaques à induction, n’hésitez pas à nous le préciser lors de la commande.<br>
+            Tous nos couscous sont accompagnés de pois chiches, raisins sec et harissa servis dans des plats séparés.<br>
+            <span>Pour toute commande de 5 couscous, 1 bouteille de Boulaouane (gris ou rouge) vous sera offerte.<br>
+            </span>Notre zone de livraison:<br>
+            Bougival - La Celle St Cloud - Louveciennes - Croissy - Chatou - Rueil Malmaison - Vaucresson - Le Chesnay - Marly le Roi - Port Marly - Le Pecq - L’Etang la Ville - Bailly - St Germain en Laye - Le Vesinet <br> <span>Minimum de commande: 30.00€
+              Moyens de paiements acceptés: chèques, ticket restaurant ou espèces.<br>
+              <a href="{{app.request.baseUrl}}/carte">Voir la Carte</a></span>
+            </p>
+          </article>
+        </section>
+        <h3>Traiteur</h3>
+        <section>
+          <article class="">
+            <img src="{{app.request.basePath}}/img/carte/traiteur.jpg" alt="">
+            <p>Nous vous proposons également notre service traiteur (avec méchoui entier, couscous…) pour toutes vos réceptions de 20 à 500 personnes.<br>
+              Nous pouvons mettre à votre disposition gratuitement le matériel nécessaire au bon déroulement de votre repas : assiettes creuses, fourchettes, cuillères, couteaux et verres
+              <span>N’hésitez à nous contacter au 01.39.18.11.18 pour de plus amples informations.</span></p>
+            </article>
+          </section>
+        </section>
+{% endblock %}

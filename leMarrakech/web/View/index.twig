@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block titel %}- Acceuil {% endblock %}
+
+{% block main %}
+  <main>
+    <section>
+      <article class="slider">
+        <ul>
+          <li><img class="myslider" src="{{app.request.basePath}}/img/slider/slider1.jpg" alt=""></li>
+          <li><img class="myslider" src="{{app.request.basePath}}/img/slider/slider2.jpg" alt=""></li>
+          <li><img class="myslider" src="{{app.request.basePath}}/img/slider/slider3.jpg" alt=""></li>
+          <li><img class="myslider" src="{{app.request.basePath}}/img/slider/slider4.jpg" alt=""></li>
+        </ul>
+      </article>
+    </section>
+    <section class="block">
+      <article class="description">
+        <h2>LE Marrakech</h2>
+        <p>Situé à Bougival en bord de Seine, nous sommes heureux de vous accueillir depuis plus de vingt ans dans un décor des mille et une nuit pour tous vos banquets, mariages ou tout simplement pour déguster en famille ou entre amis nos plats typiques de la gastronomie marocaine.<br>
+          Nous sommes ouvert tous les jours sauf le lundi pour le déjeuner à partir de midi et pour le diner à partir de 19h00.<br>
+          Notre établissement a été récompensé pour sa qualité et son service de la Fourchette d’or et du Laurier d’or de la gastronomie marocaine, distinction décernée par le Comité international d’action Gastronomique.<br>
+          Nous vous proposons également notre service traiteur pour tous vos repas de 2 à 500 personnes livré gratuitement à domicile sur un vaste secteur.<br>
+          Toute notre équipe est heureuse de vous presenter notre établissement et espère vous accueillir très prochainement.</p>
+        </article>
+        <article class="nouvauté">
+          <h2>Nouvauté</h2>
+          <p>Notre carte évolu a chaque saison</p>
+        </article>
+      </section>
+    </main>
+{% endblock %}

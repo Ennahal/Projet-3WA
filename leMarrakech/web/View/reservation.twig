@@ -1,0 +1,25 @@
+{% extends "layout.twig" %}
+
+{% block titel %}- Reservation {% endblock %}
+
+{% block main %}
+  <section>
+    <h3>Reservation</h3>
+    <article class="reservation">
+      <form class="" action="" method="POST">
+        <fieldset>
+          <label>date:</label><input type="date" name="date" value="" required="required">
+          <label>Heure:</label><input type="time" name="hour" value="" required="required">
+          <label>Nom:</label><input type="text" name="lastname" value="" required="required">
+          <label>Prenom:</label><input type="text" name="firstname" value="">
+          <label>Mail:</label><input type="email" name="mail" value="" required="required">
+          <label>Nombre de convives:</label><input type="number" name="NB" value="">
+          <label>Telephone:</label><input type="text" name="phone" value="" required="required">
+          <label>Message:</label><textarea name="Message" rows="8" cols="87"></textarea>
+          <input type="submit" value="Envoyer" />
+        </fieldset>
+      </form>
+    </article>
+  </section>
+
+{% endblock %}

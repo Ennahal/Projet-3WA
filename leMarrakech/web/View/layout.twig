@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{app.request.basePath}}/CSS/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Dr+Sugiyama" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <title>Restaurant Le Marrakech{% block title %} {% endblock %}</title>
+</head>
+<body class="container">
+  <header>
+    <h1>Le Marrakech</h1>
+    <nav>
+      <a href="{{app.request.baseUrl}}/">Accueil</a>
+      <a href="{{app.request.baseUrl}}/carte">Carte</a>
+      <a href="{{app.request.baseUrl}}/livraison">Livraison/Emporter</a>
+      <a href="{{app.request.baseUrl}}/restaurant">Restaurant</a>
+      <a href="{{app.request.baseUrl}}/reservation">Reservation</a>
+      <a href="{{app.request.baseUrl}}/contact">Contact</a>
+    </nav>
+  </header>
+
+
+{% block main %} {% endblock %}
+
+
+
+
+  <footer>
+    <section class="block2">
+      <article class="">
+        <h4>Address</h4>
+        <p>52 rue du Général de Gaulle</p>
+        <p> (en face de l'église)</p>
+        <p>77230 Dammartin en Goele</p>
+      </article>
+      <article class="">
+        <h4>Horaire</h4>
+        <p>Du mardi au Dimanche</p>
+        <p>De 12h à 14h30 et de 19h à 22h30</p>
+        <p>Fermé le Lundi.</p>
+      </article>
+      <article class="">
+        <h4>Plan</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.727535283267!2d2.6753135156812995!3d49.05380397930706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e62321b7fc62cb%3A0x67da5be267dc5332!2sRestaurant+Le+Marrakech!5e0!3m2!1sfr!2sfr!4v1513615869648" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </article>
+    </section>
+    <section class="realiser">
+      <article>
+        <p>Realiser par <span>ENNAHAL Rheda</span></p>
+      </article>
+    </section>
+  </footer>
+</body>
+<script src="{{app.request.basePath}}/JavaScript/main.js"></script>
+</html>
